@@ -1,0 +1,2 @@
+- When you use ```setRefreshTrigger(prev => prev + 1)```, you're using a functional update 
+- React state updates are asynchronous, multiple state updates can be batched together for performance
