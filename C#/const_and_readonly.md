@@ -19,7 +19,7 @@ MinUsers = 1; // Error: Cannot assign to const field
 
 **const vs readonly
 - Unlike const, readonly fields can be assigned at runtime and in constructors:
-```
+```csharp
 // Readonly can be assigned in constructor
 public readonly int MaxUsers;
 

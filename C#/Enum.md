@@ -1,6 +1,6 @@
 **basic Enum example**
 - Enums (short for enumerations) are a special type in C# that represent a set of named constants. They're useful when you need to define a set of related values that don't change during the execution of your program.
-```
+```csharp
 public enum DaysOfWeek
 {
     Monday,

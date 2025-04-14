@@ -1,5 +1,5 @@
 - A static class in C# is a class that cannot be instantiated and can only contain static members. It's marked with the static keyword.
-```
+```csharp
 public static class MathUtilities
 {
     public static double PI = 3.14159;

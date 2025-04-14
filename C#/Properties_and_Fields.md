@@ -1,4 +1,4 @@
-```
+```csharp
 public class Player
 {   
     // backing field
@@ -44,7 +44,7 @@ int score = player.Score;       // Works - public getter
 
 - Notice the difference between field modifier and access modifier
 
-```
+```csharp
 public class Example
 {
     // Private readonly field - can only be set at declaration or in constructor
