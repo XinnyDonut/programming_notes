@@ -10,26 +10,28 @@ const [user, setUser] = useState({ name: "Alice", age: 25 });
 
 setUser((prev) => ({ ...prev, age: 26 })); // Only updates 'age', keeps other properties
 ```
-##### Example 3 -spread operator with renaming
 
+##### Example 3 use `...` in array
 ```javascript
-const {
-    data: assistant,
-    isLoading: isLoadingAssistant,
-    error: assistantError,
-    refetch
-} = useGetAssistant(assistantId || '');
+// Let's say we have a Set of domains
+const domainsSet = new Set(['example.com', 'test.org', 'sample.net']);
+
+// Using the spread operator with array brackets
+const domainsArray = [...domainsSet];
+// What happens behind the scenes:
+// 1. JavaScript sees the spread operator and starts iterating through the Set
+// 2. It takes each value and places it as an element in the new array
+// 3. This creates: ['example.com', 'test.org', 'sample.net']
 ```
+##### Example 4 use `...` in function calls
 ```javascript
-function Profile({ name: userName, age: userAge }) {
-  return <h1>{userName} is {userAge} years old</h1>;
-}
-```
-##### Example 4 - Providing Default Values
-```javascript
-function Profile({ name = "Guest", age = 18 }) {
-  return <h1>{name} is {age} years old</h1>;
+const domainsSet = new Set(['example.com', 'test.org', 'sample.net']);
+
+function showDomains(first, second, third) {
+    console.log(`Domains: ${first}, ${second}, ${third}`);
 }
 
-<Profile />; // Renders: "Guest is 18 years old"
+// Using spread in function arguments doesn't need brackets
+showDomains(...domainsSet);
+// This calls: showDomains('example.com', 'test.org', 'sample.net')
 ```
